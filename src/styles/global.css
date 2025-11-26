@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", sans-serif;
+  --font-serif: "Montserrat", sans-serif;
+
+  /* PALETA ARCA LIGHT (Lujo y Claridad) */
+  --color-bg-light: #ffffff; 
+  --color-bg-subtle: #f8f8f8; /* Gris casi blanco para separar secciones */
+  
+  --color-gold-500: #b48e43; /* Dorado más sobrio (Old Gold) para fondo blanco */
+  --color-gold-600: #8a6b2e;
+  
+  --color-text-main: #111827; /* Negro suave (Gray 900) */
+  --color-text-muted: #4b5563; /* Gris medio (Gray 600) */
+}

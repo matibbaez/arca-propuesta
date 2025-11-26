@@ -1,0 +1,77 @@
+---
+// src/components/Stats.astro
+---
+
+<section id="stats-section" class="py-16 bg-gray-50 border-y border-gray-200">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            
+            <div class="group">
+                <span class="block text-4xl md:text-5xl font-serif font-black text-gray-900 mb-2 group-hover:text-gold-600 transition-colors">
+                    <span class="counter" data-target="105">0</span>
+                </span>
+                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Reseñas 5 Estrellas</p>
+            </div>
+
+            <div>
+                <span class="block text-4xl md:text-5xl font-serif font-black text-gray-900 mb-2">
+                    <span class="counter" data-target="98">0</span>%
+                </span>
+                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Tasa de Éxito</p>
+            </div>
+
+            <div>
+                <span class="block text-4xl md:text-5xl font-serif font-black text-gray-900 mb-2">
+                    +<span class="counter" data-target="1000">0</span>
+                </span>
+                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Seguidores</p>
+            </div>
+
+            <div>
+                <span class="block text-4xl md:text-5xl font-serif font-black text-gray-900 mb-2">
+                    24<span class="text-2xl text-gold-500">hs</span>
+                </span>
+                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">Respuesta</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    // ... Pega aquí el mismo script del counter que ya funcionaba ...
+    // ... solo asegúrate de que busque la clase .counter ...
+    function initStats() {
+        const section = document.getElementById('stats-section');
+        const counters = document.querySelectorAll('.counter');
+        let started = false;
+
+        const startCounting = () => {
+            if (started) return;
+            started = true;
+            counters.forEach((c) => {
+                const counter = c as HTMLElement; 
+                const target = +counter.getAttribute('data-target')!;
+                let start = target > 50 ? Math.floor(target * 0.5) : 0;
+                const duration = 1500; 
+                const increment = (target - start) / (duration / 16); 
+                let current = start;
+                const update = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current).toString();
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.innerText = target.toString();
+                    }
+                };
+                update();
+            });
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) startCounting(); });
+        }, { threshold: 0.5 });
+        if (section) observer.observe(section);
+    }
+    document.addEventListener('DOMContentLoaded', initStats);
+</script>

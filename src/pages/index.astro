@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../layouts/Navbar.astro';
+import Stats from '../layouts/Stats.astro';
+---
+
+<Layout title="Sebastián Arca | Abogado">
+    
+    <Navbar />
+
+    <header id="inicio" class="relative pt-20 pb-20 lg:pt-48 lg:pb-32 bg-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-3 border-l-2 border-gold-500 pl-4">
+                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">
+                        Especialista en Litigios
+                    </span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-gray-900 leading-tight">
+                    Solidez y experiencia.<br>
+                    <span class="text-gold-600">Protegemos su patrimonio.</span>
+                </h1>
+                
+                <p class="text-gray-600 text-lg font-sans font-light leading-relaxed max-w-md">
+                    Especialistas en la defensa de Accidentes de Tránsito, ART y Despidos. 
+                Diseñamos una estrategia probada para asegurar la máxima compensación posible.
+                </p>
+
+                <div class="pt-6 flex flex-wrap gap-4">
+                    <a href="https://wa.me/54911XXXXXXXX" class="bg-black text-white px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-[0.15em] hover:bg-gray-800 transition-all shadow-xl">
+                        Consulta Urgente
+                    </a>
+                    <a href="#areas" class="border border-gray-300 text-gray-900 px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-[0.15em] hover:border-black transition-all">
+                        Ver Especialidades
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative h-[500px] bg-gray-100 overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1471&auto=format&fit=crop" 
+                    alt="Sebastián Arca" 
+                    class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-1000"
+                />
+                <div class="absolute inset-0 border-[1px] border-gold-500/30 m-4 pointer-events-none"></div>
+            </div>
+        </div>
+    </header>
+    
+    <Stats />
+    
+    <section id="casos" class="py-24 bg-[#050505] border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            
+            <span class="text-gold-500 text-sm font-bold uppercase tracking-widest mb-2 block">CONFIANZA COMPROBADA</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-white mb-16">
+                105 Clientes. <span class="text-gold-500">5 Estrellas.</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#121212] p-8 rounded-xl border border-white/5 text-left hover:border-gold-500/30 transition-colors shadow-lg">
+                    <div class="flex text-gold-500 text-sm mb-4">★★★★★</div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Resolvió mi accidente de tránsito en un tiempo récord y obtuve la indemnización máxima. Estratégico y muy directo."</p>
+                    <p class="text-white font-bold text-sm uppercase tracking-wider">— María L.</p>
+                </div>
+                 <div class="bg-[#121212] p-8 rounded-xl border border-white/5 text-left hover:border-gold-500/30 transition-colors shadow-lg">
+                    <div class="flex text-gold-500 text-sm mb-4">★★★★★</div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Me despidieron sin causa y Sebastián peleó hasta el final. No se conformó con menos. Siempre me mantuvo informado."</p>
+                    <p class="text-white font-bold text-sm uppercase tracking-wider">— Julio P.</p>
+                </div>
+                 <div class="bg-[#121212] p-8 rounded-lg border border-white/5 text-left hover:border-gold-500/30 transition-colors shadow-lg">
+                    <div class="flex text-gold-500 text-sm mb-4">★★★★★</div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Excelente profesional. Destaco su dedicación y rapidez en el trámite de divorcio. Un placer trabajar con gente tan seria."</p>
+                    <p class="text-white font-bold text-sm uppercase tracking-wider">— Carla V.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="#" target="_blank" class="text-gray-500 hover:text-white transition-colors text-xs uppercase tracking-widest border-b border-gray-700 hover:border-white pb-1">
+                    Ver las 105 reseñas en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="areas" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid md:grid-cols-12 gap-12">
+
+                <div class="md:col-span-4 lg:col-span-3 pt-6 text-center md:text-left">
+                    <h2 class="text-3xl font-serif text-gray-900 font-bold mb-6 border-b border-gold-500/50 pb-3">
+                        Nuestras Ramas
+                    </h2>
+                    <ul class="text-gray-600 space-y-4 uppercase text-sm tracking-wider">
+                        <li><a href="#accidentes-art" class="hover:text-gold-600 transition-colors text-center md:text-left block">• Accidentes & ART</a></li>
+                        <li><a href="#laboral-despidos" class="hover:text-gold-600 transition-colors text-center md:text-left block">• Despidos e Indemnizaciones</a></li>
+                        <li><a href="#civil-family" class="hover:text-gold-600 transition-colors text-center md:text-left block">• Familia y Sucesiones</a></li>
+                        <li><a href="#cobranzas" class="hover:text-gold-600 transition-colors text-center md:text-left block">• Cobranzas Judiciales</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-8 lg:col-span-9">
+                    <h2 class="text-3xl font-serif text-gray-900 mb-10 border-b border-gray-200 pb-3 text-center md:text-left">Estrategia Detallada</h2>
+                    
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <div id="accidentes-art" class="group p-6 bg-gray-50 border border-gray-200 hover:border-gold-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-gray-200/50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Tránsito y Lesiones</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-sm">Reclamos por daños y perjuicios. Lesiones, destrucción total y reclamos a aseguradoras. Maximice su indemnización.</p>
+                            <a href="https://wa.me/54911XXXXXXXX" class="text-gold-600 uppercase text-xs font-bold tracking-widest border-b border-gold-600 pb-1">Consultar Caso &rarr;</a>
+                        </div>
+
+                        <div id="laboral-despidos" class="group p-6 bg-gray-50 border border-gray-200 hover:border-gold-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-gray-200/50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Accidentes Laborales (ART)</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-sm">Gestión de enfermedades profesionales y accidentes en el trabajo. Defendemos sus derechos laborales.</p>
+                            <a href="https://wa.me/54911XXXXXXXX" class="text-gold-600 uppercase text-xs font-bold tracking-widest border-b border-gold-600 pb-1">Consultar &rarr;</a>
+                        </div>
+
+                        <div class="group p-6 bg-gray-50 border border-gray-200 hover:border-gold-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-gray-200/50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Despidos sin Causa</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-sm">Defensa del trabajador ante despidos ilegales o trabajo en negro.</p>
+                            <a href="https://wa.me/54911XXXXXXXX" class="text-gold-600 uppercase text-xs font-bold tracking-widest border-b border-gold-600 pb-1">Reclamo &rarr;</a>
+                        </div>
+                        
+                        <div id="civil-family" class="group p-6 bg-gray-50 border border-gray-200 hover:border-gold-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-gray-200/50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Divorcios y Familia</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-sm">Soluciones rápidas en divorcios, alimentos y régimen de comunicación.</p>
+                            <a href="https://wa.me/54911XXXXXXXX" class="text-gold-600 uppercase text-xs font-bold tracking-widest border-b border-gold-600 pb-1">Consultar &rarr;</a>
+                        </div>
+
+                        <div class="group p-6 bg-gray-50 border border-gray-200 hover:border-gold-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-gray-200/50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Sucesiones y Herencias</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-sm">Tramitación ágil para la transferencia de bienes y propiedades.</p>
+                            <a href="https://wa.me/54911XXXXXXXX" class="text-gold-600 uppercase text-xs font-bold tracking-widest border-b border-gold-600 pb-1">Iniciar Trámite &rarr;</a>
+                        </div>
+
+                         <div id="cobranzas" class="group p-6 bg-gray-50 border border-gray-200 hover:border-gold-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-gray-200/50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Cobranzas Judiciales</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 text-sm">Recupero de deudas y gestiones de cobro eficientes. Foco en la acción legal rápida.</p>
+                            <a href="https://wa.me/54911XXXXXXXX" class="text-gold-600 uppercase text-xs font-bold tracking-widest border-b border-gold-600 pb-1">Ver Proceso &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer id="contacto" class="bg-neutral-900 text-gray-400 border-t-4 border-gold-500 font-sans text-sm relative">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                
+                <div class="space-y-6">
+                    <h3 class="font-serif text-3xl text-white font-bold tracking-widest">ARCA</h3>
+                    <p class="text-gray-400 leading-relaxed max-w-xs text-sm">
+                        Defensa legal de alto rendimiento. Estrategia agresiva para asegurar la máxima compensación en casos de accidentes, ART y despidos.
+                    </p>
+                    <a href="https://wa.me/54911XXXXXXXX" class="text-gold-500 text-lg font-bold hover:text-white transition-colors block pt-2">
+                        WhatsApp: 11 XXXX-XXXX
+                    </a>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-widest mb-6 text-xs border-b border-gray-700 pb-2 inline-block">Especialidades</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#accidentes-art" class="hover:text-gold-500 transition-colors flex items-center gap-2"><span class="text-gold-500">›</span> Accidentes de Tránsito</a></li>
+                        <li><a href="#laboral-despidos" class="hover:text-gold-500 transition-colors flex items-center gap-2"><span class="text-gold-500">›</span> Despidos y ART</a></li>
+                        <li><a href="#civil-family" class="hover:text-gold-500 transition-colors flex items-center gap-2"><span class="text-gold-500">›</span> Divorcios y Familia</a></li>
+                        <li><a href="#cobranzas" class="hover:text-gold-500 transition-colors flex items-center gap-2"><span class="text-gold-500">›</span> Sucesiones</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-widest mb-6 text-xs border-b border-gray-700 pb-2 inline-block">Menú</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="hover:text-gold-500 transition-colors">Inicio</a></li>
+                        <li><a href="#areas" class="hover:text-gold-500 transition-colors">Especialidades</a></li>
+                        <li><a href="#casos" class="hover:text-gold-500 transition-colors">Resultados</a></li>
+                        <li><a href="#contacto" class="hover:text-gold-500 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-widest mb-6 text-xs border-b border-gray-700 pb-2 inline-block">Oficina</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <strong class="block text-white">Tribunales de San Martín</strong>
+                            <span class="block">Calle Falsa 123, Piso 5</span>
+                            <span class="text-gray-500">Provincia de Buenos Aires</span>
+                        </li>
+                        <li class="pt-2">
+                            <a href="mailto:contacto@estudioarca.com" class="hover:text-gold-500 transition-colors">contacto@estudioarca.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 mt-12 flex flex-col md:flex-row justify-between text-xs text-gray-600">
+                <p>&copy; 2025 Sebastián Arca. Abogado. Todos los derechos reservados.</p>
+                <div class="flex gap-6 mt-2 md:mt-0">
+                    <a href="#" class="hover:text-gold-500 transition-colors">Aviso Legal</a>
+                    <a href="#" class="hover:text-gold-500 transition-colors">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</Layout>
